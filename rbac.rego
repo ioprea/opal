@@ -23,7 +23,7 @@ package app.rbac
 
 # By default, deny requests
 #default allow = false
-default allow := true
+default allow := "default deny"
 
 # Allow admins to do anything
 #allow {
