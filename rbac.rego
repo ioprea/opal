@@ -23,7 +23,7 @@ package app.rbac
 
 # By default, deny requests
 #default allow = false
-default allow := "default deny"
+default allow := true
 
 # Allow admins to do anything
 #allow {
@@ -31,9 +31,9 @@ default allow := "default deny"
 #}
 
 # Allow bob to do anything
-#allow {
-#	input.user == "bob"
-#}
+allow {
+	input.user == "bob"
+}
 
 #authz = result {
 #	result := {
