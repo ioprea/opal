@@ -22,7 +22,8 @@ package app.rbac
 # import data.utils
 
 # By default, deny requests
-default allow = false
+#default allow = false
+default allow := true
 
 # Allow admins to do anything
 #allow {
@@ -30,9 +31,9 @@ default allow = false
 #}
 
 # Allow bob to do anything
-allow {
-	input.user == "bob"
-}
+#allow {
+#	input.user == "bob"
+#}
 
 #authz = result {
 #	result := {
