@@ -26,5 +26,11 @@ default allow := false
 
 # Allow bob to do anything
 allow {
-	input.user == "bob"
+	some role in input.user.roles
+	role == "admin"
+}
+
+allow {
+	some role in input.user.roles
+	role == "meeting_planner"
 }
